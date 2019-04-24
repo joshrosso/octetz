@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+  <title>octetz</title>
+  <link>https://octetz.com</link>
+  <description>Software and systems blog by @joshrosso</description>
+  <atom:link href="https://octetz.com/rss/feed.xml" rel="self" type="application/rss+xml" />
+
+  <item>
+    <title>Kubernetes Network Policy APIs</title>
+    <link>https://octetz.com/posts/k8s-network-policy-apis</link>
+    <description>In this post we explore and compare the various network policy APIs available when working with Kubernetes!</description>
+    <pubDate>Mon, 22 Apr 2019 10:00:01 GMT</pubDate>
+    <category>Kubernetes</category>
+    <guid>https://octetz.com/posts/k8s-network-policy-apis</guid>
+  </item>
+
+  <item>
+    <title>Contour: Advanced Ingress with Envoy</title>
+    <link>https://octetz.com/posts/contour-adv-ing-and-delegation</link>
+    <description>A look at how Contour facilitates advanced ingress, route delegation, and certificate delegation using Envoy.</description>
+    <pubDate>Fri, 12 Apr 2019 10:00:01 GMT</pubDate>
+    <category>Kubernetes</category>
+    <guid>https://octetz.com/posts/contour-adv-ing-and-delegation</guid>
+  </item>
+
+  <item>
+    <title>Highly Available Control Plane with kubeadm 1.14+</title>
+    <link>https://octetz.com/posts/ha-control-plane-k8s-kubeadm</link>
+    <description>A look at bootstrapping HA control planes with new features in 1.14+.</description>
+    <pubDate>Tue, 26 Mar 2019 10:00:01 GMT</pubDate>
+    <category>Kubernetes</category>
+    <guid>https://octetz.com/posts/ha-control-plane-k8s-kubeadm</guid>
+  </item>
+
+  <item>
+    <title>Configuring Route Reflectors in Calico</title>
+    <link>https://octetz.com/posts/rr-setup</link>
+    <description>A look at setting up route reflection in Calico for your Kubernetes clusters!</description>
+    <pubDate>Mon, 10 Dec 2018 10:00:01 GMT</pubDate>
+    <category>Kubernetes</category>
+    <guid>https://octetz.com/posts/rr-setup</guid>
+  </item>
+
+  <item>
+    <title>Setting Up Pod Security Policies</title>
+    <link>https://octetz.com/posts/setting-up-psps</link>
+    <description>How to setup and configure Kubernetes Clusters to use Pod Security Policies and a behind the scenes look at how they work!</description>
+    <pubDate>Wed, 12 Dec 2018 10:00:01 GMT</pubDate>
+    <category>Kubernetes</category>
+    <guid>https://octetz.com/posts/setting-up-psps</guid>
+  </item>
+
+  <item>
+    <title>Securing Communication to Controller Manager and Scheduler</title>
+    <link>https://octetz.com/posts/secure-port-k8s-cm-sched</link>
+    <description>Taking a look at communicating with the secure ports for kube-scheduler and kube-controller-manager. Covering both tls and auth (SubjectAccessReview) and how to we hook up to things like prometheus.</description>
+    <pubDate>Wed, 05 Dec 2018 10:00:01 GMT</pubDate>
+    <category>Kubernetes</category>
+    <guid>https://octetz.com/posts/secure-port-k8s-cm-sched</guid>
+  </item>
+
+</channel>
+
+</rss> 
