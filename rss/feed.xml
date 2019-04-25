@@ -8,6 +8,15 @@
   <atom:link href="https://octetz.com/rss/feed.xml" rel="self" type="application/rss+xml" />
 
   <item>
+    <title>Vim as a Go (Golang) IDE using LSP and vim-go</title>
+    <link>https://octetz.com/posts/vim-as-go-ide</link>
+    <description>Exploring how Vim is a highly-capable Go IDE in 2019+.</description>
+    <pubDate>Thu, 25 Apr 2019 10:00:01 GMT</pubDate>
+    <category>Kubernetes</category>
+    <guid>https://octetz.com/posts/vim-as-go-ide</guid>
+  </item>
+
+  <item>
     <title>Kubernetes Network Policy APIs</title>
     <link>https://octetz.com/posts/k8s-network-policy-apis</link>
     <description>In this post we explore and compare the various network policy APIs available when working with Kubernetes!</description>
