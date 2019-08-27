@@ -1,0 +1,137 @@
+@media (min-width: 1px) {
+    body {
+        display: block;
+        margin:0 auto;
+        font-family: 'IBM Plex Sans', sans-serif;
+        padding-left: 20px;
+        font-size: 1em;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        width: 600px;
+    }
+}
+
+@media (min-width: 840px) {
+    body {
+        display: block;
+        margin:0 auto;
+        font-family: 'IBM Plex Sans', sans-serif;
+        padding-left: 20px;
+        font-size: 1.2em;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        width: 800px;
+    }
+}
+
+@media (min-width: 1040px) {
+
+    body {
+        display: block;
+        margin:0 auto;
+        font-family: 'IBM Plex Sans', sans-serif;
+        padding-left: 20px;
+        font-size: 1.2em;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        width: 1000px;
+    }
+}
+
+@media (min-width: 1px) {
+    .large-img {
+        width: 600px;
+    }
+}
+
+@media (min-width: 800px) {
+    .large-img {
+        width: 800px;
+    }
+}
+
+
+p {
+    margin: 0;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+pre {
+    background-color: #eee;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+code {
+    background-color: #eee;
+    word-wrap: break-word;
+}
+
+.header {
+    background-color: rgb(53, 53, 53);
+    border-bottom: lightcoral;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    color: #fff;
+    display: flex;
+    height: 3em;
+    justify-content: space-between;
+    line-height: 3em;
+    width: 100%;
+}
+
+.header-title {
+    padding-left: 2em;
+}
+
+.header-nav {
+    padding-right: 2em;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    width: 100%;
+}
+
+.content-body {
+    padding-left: 2em;
+    text-align: justify;
+    width: 80%;
+}
+
+.content-body p {
+    margin-bottom: 2em;
+}
+
+.content-body h1, h2, h3, h4, h5 {
+    margin-bottom: 1em;
+}
+
+.content-nav {
+    width: 17%;
+}
+
+.content-nav h1 {
+    font-size: 1em;
+    margin-bottom: .5em;
+}
+
+.content-nav h2 {
+    font-size: .7em;
+    padding-left: 1em;
+}
