@@ -17,6 +17,7 @@ OCTETZ_PATH=/home/josh/f/d/octetz
 STATIC_SITE_PATH=${CURRENT_DIR}/../octetz-static
 
 POSTS=( 
+"k8s-controllers-vs-operators"
 "k8s-static-pods"
 "vim-as-go-ide"
 "k8s-network-policy-apis" 

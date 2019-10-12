@@ -8,6 +8,15 @@
   <atom:link href="https://octetz.com/rss/feed.xml" rel="self" type="application/rss+xml" />
 
   <item>
+    <title>Operators and Controllers, What is the Difference?</title>
+    <link>https://octetz.com/posts/k8s-controllers-vs-operators</link>
+    <description>In this post we explore the differences (or lack thereof between operators and controllers!</description>
+    <pubDate>Sat, 12 Oct 2019 10:00:01 GMT</pubDate>
+    <category>Kubernetes</category>
+    <guid>https://octetz.com/posts/k8s-controllers-vs-operators</guid>
+  </item>
+
+  <item>
     <title>Kubernetes Static Pods</title>
     <link>https://octetz.com/posts/k8s-static-pods</link>
     <description>In this post we will be looking at static pods. What they are, why they exist, and more!</description>
