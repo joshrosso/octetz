@@ -12,11 +12,13 @@ bold=`tput bold`
 green=`tput setaf 2`
 reset=`tput sgr0`
 
+CURRENT_DIR=$(pwd)
 OCTETZ_PATH=/home/josh/f/d/octetz
-STATIC_SITE_PATH=/home/josh/f/d/octetz/octetz-static
+STATIC_SITE_PATH=${CURRENT_DIR}/../octetz-static
 
 POSTS=( 
-"vim-as-go-ide" 
+"k8s-static-pods"
+"vim-as-go-ide"
 "k8s-network-policy-apis" 
 "contour-adv-ing-and-delegation" 
 "ha-control-plane-k8s-kubeadm" 
@@ -27,12 +29,26 @@ POSTS=(
 
 TEMPLATE=template.html
 
+if [ ! -d ${STATIC_SITE_PATH} ]
+then
+  mkdir -p ../octetz-static/posts/img
+fi
+
+if [ ! -d ${STATIC_SITE_PATH}/posts ]
+then
+  mkdir -p ../octetz-static/posts/img
+fi
+
+if [ ! -d ${STATIC_SITE_PATH}/posts/img ]
+then
+  mkdir -p ../octetz-static/posts/img
+fi
+
 printf "${green}===============> Pulling any missing repos${reset}"
 for POST in "${POSTS[@]}"
 do
   if [ ! -d ${OCTETZ_PATH}/${POST} ]
   then
-    CURRENT_DIR=$(pwd)
     cd ${OCTETZ_PATH}
     git clone https://github.com/octetz/${POST}
     cd ${CURRENT_DIR}
@@ -55,6 +71,7 @@ done
 echo
 printf "${green}===============> Moving static assets\n${reset}"
     cp -v index.html ${STATIC_SITE_PATH}/
+    cp -v styles.css ${STATIC_SITE_PATH}/
     cp -v posts/index.html ${STATIC_SITE_PATH}/posts
     cp -v rss/feed.xml ${STATIC_SITE_PATH}/rss
 echo
@@ -65,3 +82,5 @@ printf "${green}git -C ${STATIC_SITE_PATH} add -A &&\ \n${reset}"
 printf "    ${green}git -C ${STATIC_SITE_PATH} commit -m \"update\" &&\ \n${reset}"
 printf "    ${green}git -C ${STATIC_SITE_PATH} push origin master\n${reset}"
 echo
+
+cp -v ${CURRENT_DIR}/styles.css ${STATIC_SITE_PATH}/posts/
