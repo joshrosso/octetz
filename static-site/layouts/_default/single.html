@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{ $css := "style.css" | relURL }}
+  <link rel="stylesheet" href="{{ $css }}">
+  <title>{{ .Title }}</title>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="header-element">
+<svg xmlns="http://www.w3.org/2000/svg" width="100px" viewBox="0 0 708.23 130.61"><title>Artboard 1</title><g id="O"><rect class="cls-1" x="60.61" width="25.61" height="25.61"/><rect class="cls-1" x="25.61" width="25.61" height="25.61"/><rect class="cls-1" x="60.61" y="105" width="25.61" height="25.61"/><rect class="cls-1" y="35" width="25.61" height="25.61"/><rect class="cls-1" y="70" width="25.61" height="25.61"/><rect class="cls-1" x="25.61" y="105" width="25.61" height="25.61"/><rect class="cls-1" x="86.22" y="70" width="25.61" height="25.61"/><rect class="cls-1" x="86.22" y="35" width="25.61" height="25.61"/></g><g id="C"><rect class="cls-1" x="176.25" width="25.61" height="25.61"/><rect class="cls-1" x="176.25" y="105" width="25.61" height="25.61"/><rect class="cls-1" x="211.25" y="105" width="25.61" height="25.61"/><rect class="cls-1" x="141.22" y="105" width="25.61" height="25.61"/><rect class="cls-1" x="211.25" width="25.61" height="25.61"/><rect class="cls-1" x="141.22" y="70" width="25.61" height="25.61"/><rect class="cls-1" x="141.22" y="35" width="25.61" height="25.61"/><rect class="cls-1" x="141.22" width="25.61" height="25.61"/></g><g id="C_copy" data-name="C copy"><rect class="cls-1" x="416.44" width="25.61" height="25.61"/><rect class="cls-1" x="416.44" y="105" width="25.61" height="25.61"/><rect class="cls-1" x="451.44" y="105" width="25.61" height="25.61"/><rect class="cls-1" x="381.44" y="105" width="25.61" height="25.61"/><rect class="cls-1" x="451.44" width="25.61" height="25.61"/><rect class="cls-1" x="381.44" width="25.61" height="25.61"/><rect class="cls-1" x="416.44" y="52.5" width="25.61" height="25.61"/><rect class="cls-1" x="381.44" y="52.5" width="25.61" height="25.61"/></g><g id="T"><rect class="cls-1" x="496.44" width="25.61" height="25.61"/><rect class="cls-1" x="531.6" width="25.61" height="25.61"/><rect class="cls-1" x="531.6" y="105" width="25.61" height="25.61"/><rect class="cls-1" x="566.61" y="35" width="25.61" height="25.61"/><rect class="cls-1" x="496.44" y="35" width="25.61" height="25.61"/><rect class="cls-1" x="566.61" width="25.61" height="25.61"/><rect class="cls-1" x="531.6" y="70" width="25.61" height="25.61"/><rect class="cls-1" x="531.6" y="35" width="25.61" height="25.61"/></g><g id="T2"><rect class="cls-1" x="265.25" width="25.61" height="25.61"/><rect class="cls-1" x="300.41" width="25.61" height="25.61"/><rect class="cls-1" x="300.41" y="105" width="25.61" height="25.61"/><rect class="cls-1" x="335.44" y="35" width="25.61" height="25.61"/><rect class="cls-1" x="335.44" width="25.61" height="25.61"/><rect class="cls-1" x="265.25" y="35" width="25.61" height="25.61"/><rect class="cls-1" x="300.41" y="70" width="25.61" height="25.61"/><rect class="cls-1" x="300.41" y="35" width="25.61" height="25.61"/></g><g id="TZ"><rect class="cls-1" x="612.61" width="25.61" height="25.61"/><rect class="cls-1" x="647.62" width="25.61" height="25.61"/><rect class="cls-1" x="647.62" y="105" width="25.61" height="25.61"/><rect class="cls-1" x="682.62" y="105" width="25.61" height="25.61"/><rect class="cls-1" x="612.61" y="105" width="25.61" height="25.61"/><rect class="cls-1" x="682.62" width="25.61" height="25.61"/><rect class="cls-1" x="634.11" y="70" width="25.61" height="25.61"/><rect class="cls-1" x="660.71" y="35" width="25.61" height="25.61"/></g></svg>
+      </div>
+      <div class="nav-section">
+      <div class="header-element">
+        <a href="#">All Content</a>
+      </div>
+      <div class="header-element">
+        <a href="#">Series</a>
+      </div>
+      <div class="header-element">
+        <a href="#">Follow</a>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="page">
+    <div class="content-container">
+      <div class="left-nav">
+      </div>
+      <div class="content">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+      </div>
+      <div class="right-nav">
+        <p class="toc-title">{{ .Title }}</p>
+        {{ .TableOfContents }}
+      </div>
+    </div></div>
+</body>
+
+</html>

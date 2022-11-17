@@ -10,4 +10,4 @@ title = 'octetz: software systems engineering'
 
 [markup]
   [markup.highlight]
-    style = 'friendly'
+    style = 'dracula'

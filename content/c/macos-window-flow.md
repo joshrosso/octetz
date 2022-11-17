@@ -4,7 +4,7 @@ date: 2022-11-16T10:41:11-07:00
 draft: false
 ---
 
-Metadata is crucial for several I've changed my workstation setup to be an M1 Mac running a Linux VM for
+I've changed my workstation setup (again 🙃) to be an M1 Mac running a Linux VM for
 development. Largely inspired by Mitchell Hashimoto's work at
 [mitchellh/nixos-config](https://github.com/mitchellh/nixos-config). While I've
 benefited deeply from Mac's [SoC] solid battery life, graphics, and audio, I find the

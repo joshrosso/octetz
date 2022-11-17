@@ -1,0 +1,227 @@
+@font-face {
+  font-family: light15;
+  src: url("book-19.woff") format("woff");
+}
+@font-face {
+  font-family: jbm;
+  src: url("jetbrains-mono.woff2") format("woff2");
+}
+
+:root {
+  --header-link-color: #000;
+  --logo-fill-color: #231f20;
+  --header-bg-color: hsl(210,8%,97.5%);
+  --link-color: #0069c2;
+  --bg-color: #fff;
+  --text-color: #000;
+  --header-height: 40px;
+  --left-nav-width: 175px;
+  --right-nav-width: 175px;
+  --border-color: #e2e4e8;
+}
+
+html,
+body {
+  margin: 0;
+  padding-bottom: 20px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+h1,
+h2,
+h3 {
+  padding-bottom: 10px;
+  border-bottom: thin solid var(--border-color);
+}
+
+h1 {
+  line-height: 1.5;
+}
+
+a {
+  color: var(--link-color);
+
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: light15,sans-serif;
+}
+
+div {
+  /* makes border and padding part of the width calculation
+   * margin remains outside of this calculation */
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: var(--header-bg-color);
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 1px 2px hsla(0,0%,0%,0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05), 0 2px 8px hsla(0, 0%, 0%, 0.05);
+}
+
+.header a {
+  color: var(--header-link-color);
+  text-decoration: none;
+}
+
+.header-content {
+  display: flex;
+  padding: 0px 10px 0px 10px;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  min-width: 800px;
+}
+
+.header-element {
+  /*questionable whether this should be flex just to do `align-items: center`?*/
+  display: flex;
+}
+
+.nav-section {
+  display: flex;
+}
+
+.nav-section .header-element {
+  margin-left: 10px;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.content-container {
+  display: flex;
+}
+
+.left-nav {
+  margin-right: 10px;
+  width: var(--left-nav-width);
+  height: 300px;
+}
+
+.right-nav {
+  margin-left: 10px;
+  position: sticky;
+  top: 10px;
+  width: var(--right-nav-width);
+  height: 300px;
+}
+
+.right-nav ul {
+  font-size: 12px;
+  list-style-type: decimal;
+  padding-inline-start: 1rem;
+}
+
+.right-nav ul li {
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+
+.content {
+  padding: 0px 10px 0px 10px;
+  min-width: 100px;
+  max-width: 800px;
+  border-width: 1px;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-color: var(--border-color);
+}
+
+p.toc-title {
+  padding-bottom: 14px;
+  font-weight: 800;
+  border-bottom: thin solid var(--border-color);
+}
+
+pre {
+  overflow-x: auto;
+  margin: 0;
+  padding: 1rem;
+  word-wrap: break-word;
+  border-radius: .6rem;
+}
+
+code {
+  font-size: 14px;
+  font-family: jbm,monospace;
+  word-wrap: break-word;
+}
+
+.tweet {
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  display: block; 
+  height: 1px;
+  border: 0; 
+  border-top: 1px solid var(--border-color);
+  margin: 1em 0; 
+  padding: 0;
+}
+
+.footnotes {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.cls-1{
+  fill: var(--logo-fill-color);
+}
+
+@media (max-width: 1200px) {
+  .left-nav {
+    width: 50px;
+  }
+}
+
+@media (max-width: 1075px) {
+  .left-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 1015px) {
+  .right-nav {
+    display: none;
+  }
+  .content {
+    border-width: 0;
+  }
+}
+
+@media (max-width: 801px) {
+  .page {
+    display: block;
+  }
+  .header-content {
+    min-width: 100%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --header-link-color: #fff;
+    --logo-fill-color: #fff;
+    --header-bg-color: #000;
+    --border-color: #4e4e4e;
+    --bg-color: #1b1b1b;
+    --text-color: #fff;
+    --link-color: #8cb4ff;
+  }
+}
