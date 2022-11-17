@@ -1,0 +1,13 @@
+baseURL = 'https://octetz.com'
+languageCode = 'en-us'
+title = 'octetz: software systems engineering'
+
+[params]
+  homeText = 'I made this from scratch!'
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup]
+  [markup.highlight]
+    style = 'friendly'

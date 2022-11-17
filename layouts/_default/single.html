@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{ $css := "style.css" | relURL }}
+  <link rel="stylesheet" href="{{ $css }}">
+  <title>{{ .Title }}</title>
+</head>
+
+<body>
+  <div class="header">
+    octetz
+  </div>
+  <div class="page">
+    <div class="content-container">
+      <div class="left-nav">
+      </div>
+      <div class="content">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+      </div>
+      <div class="right-nav">
+        <p class="toc-title">{{ .Title }}</p>
+        {{ .TableOfContents }}
+      </div>
+    </div></div>
+</body>
+
+</html>
