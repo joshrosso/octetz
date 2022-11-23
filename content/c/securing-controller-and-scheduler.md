@@ -14,8 +14,6 @@ I've been looking into interacting with the secure (tls) ports for the
 
 **Video Walkthrough:**
 
-{{< yblink dhPy3lWWhoU >}}
-
 Based on the [1.12
 changelog](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.12.md),
 secure serving on `10257` to the `kube-controller-manager` is enabled:

@@ -21,8 +21,6 @@ traffic; it is part, but Calico may also leverage
 routing. In this post, I’ll attempt to explain the routing options of Calico and
 how BGP compliments each.
 
-{{< yblink MpbIZ1SmEkU >}}
-
 ## Example Architecture
 
 For this demonstration, I have setup the following architecture in AWS. The

@@ -17,8 +17,6 @@ Good news! You can easily link vim to the
 to get completion, validation and more. In this post we’ll explore how to setup
 a language server client to take advantage of this.
 
-{{< yblink eSAzGx34gUE >}}
-
 ## Language Server
 
 Language servers provide programming language features to editors and IDEs by

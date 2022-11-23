@@ -16,8 +16,6 @@ to copy certificates and keys among nodes relieving additional orchestration and
 complexity in the bootstrapping process. In this post we will dive into how it
 works.
 
-{{< yblink 27v36t-3afQ >}}
-
 ## How It Works
 
 `kubeadm init` initializes a Kubernetes cluster by standing up a single master.

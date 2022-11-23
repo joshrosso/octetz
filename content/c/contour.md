@@ -16,8 +16,6 @@ supports advanced ingress functionality with its
 Custom Resource Definition (CRD). We'll explore some common ingress needs such
 as weighted load balancing and cover how multi-team ingress can be facilitated.
 
-{{< yblink O7HfkgzD7Z0 >}}
-
 ## How Contour Works
 
 A simplified view of Contour is a pod with an Envoy container and controller.

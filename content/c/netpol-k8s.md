@@ -27,8 +27,6 @@ that supports it, these rules are enforced. However, the standard Kubernetes
 [Calico](https://www.projectcalico.org) and [Cilium](https://cilium.io) offer
 their own network policy CRDs. 
 
-{{< yblink pqYR7e3H4ME >}}
-
 ## Kubernetes NetworkPolicy
 
 `NetworkPolicy` objects can be added to any Kubernetes cluster. In order for

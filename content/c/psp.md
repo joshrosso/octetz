@@ -14,8 +14,6 @@ fairly privileged container that can compromise a system. Pod Security Policies
 protect clusters from privileged pods by ensuring the requester is authorized to
 create a pod as configured.
 
-{{< yblink -t0JUMSzmV0 >}}
-
 ## How It Works
 
 A PodSecurityPolicy is a Kubernetes API object. You can create them without any

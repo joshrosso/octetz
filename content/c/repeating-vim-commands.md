@@ -16,8 +16,6 @@ post you'll explore my favorite feature of vim, macros. Macros save substantial
 time on these kinds of tasks. It also helps remain efficient when your regex
 powers are failing you.
 
-{{< yblink Hd33Q0ZjZuk >}}
-
 ## Identify a Pattern
 
 To start off, copy the following HTML into a file.

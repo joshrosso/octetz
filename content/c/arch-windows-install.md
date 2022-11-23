@@ -17,8 +17,6 @@ Linux. The Windows partition is encrypted with
 detail the step-by-step. The video link below providers more context on how all
 the pieces fit together.
 
-{{< yblink ybvwikNlx9I >}}
-
 ## Installation Media
 
 This section covers creating installation media for Windows and Arch Linux. You'll need 2 USB 

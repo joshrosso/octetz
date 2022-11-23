@@ -20,8 +20,6 @@ everything so much, the idea of reformatting is frightening. However, as you'll
 see in this post, with some simple automation, you can ensure [fairly]
 consistent desktop environments across installs.
 
-{{< yblink Q_3vc-u01Bw >}}
-
 ## Setup
 
 My entire configuration is sourced at https://github.com/octetz/linux-desktop.

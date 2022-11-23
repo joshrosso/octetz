@@ -13,8 +13,6 @@ Calico is a popular CNI plugin for Kubernetes. It leverages Border Gateway
 Protocol (BGP) for communicating routes available on nodes. This method fosters
 a highly scalable networking model between our workloads.
 
-{{< yblink gxzLrgsKhBw >}}
-
 ## The Case for Route Reflection
 
 Calico requires no additional routers or infrastructure to run. Like many CNI

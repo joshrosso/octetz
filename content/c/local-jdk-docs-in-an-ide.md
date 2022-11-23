@@ -19,8 +19,6 @@ traverse through various classes and functions. Instead, when I hit the
 JavaDocs and set it up in Intellij.  While these examples focus on Intellij, you
 may find this information useful for your own IDE.
 
-{{< yblink FfnTR9Gv9Gc >}}
-
 ## Set Remote Documentation URL
 
 First, I should acknowledge it is easy to point Intellij at the JDK JavaDocs

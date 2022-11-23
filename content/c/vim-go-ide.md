@@ -20,8 +20,6 @@ multi-purpose tool in 2019+. Traditionally, writing Go in Vim meant adding the
 Server Protocol](https://langserver.org) (LSP), there are new options worth
 exploring.
 
-{{< yblink T32yqetyy8s >}}
-
 ## The Past and The Present
 
 Before LSPs, we _generally_ used [gocode](https://github.com/nsf/gocode), one of
