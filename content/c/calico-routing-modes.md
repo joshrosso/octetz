@@ -27,7 +27,7 @@ For this demonstration, I have setup the following architecture in AWS. The
 terraform is [here](https://github.com/octetz/calico-routing/blob/master/servers.tf).  The Calico deployment is
 [here](https://raw.githubusercontent.com/octetz/calico-routing/master/calico.yaml).
 
-<img src="https://octetz.s3.us-east-2.amazonaws.com/calico-aws-architecture.png" class="center" width="600">}}
+<img src="https://octetz.s3.us-east-2.amazonaws.com/calico-aws-architecture.png" class="center">}}
 
 For simplicity, there is only 1 master node. Worker nodes are spread across
 availability zones in 2 different subnets. There will be 2 worker nodes in
@@ -158,7 +158,7 @@ destination IPs.
 
 <img
 src="https://upload.wikimedia.org/wikipedia/commons/2/2d/IPTunnelDiagram_01-12-07.jpg"
-class="center" width="600">
+class="center">
 
 In IP-in-IP mode, `worker-1`'s route table is as follows. 
 
@@ -263,7 +263,7 @@ Packets are blocked because src/dst checks are enabled. To fix this, disable the
 checks on every host in AWS. 
 
 <img src="https://octetz.s3.us-east-2.amazonaws.com/aws-src-dst-check.png"
-class="center" width="600">
+class="center">
 
 Traffic is now routable between `pod-1` and `pod-2`. The wireshark output is as
 follows.
@@ -297,7 +297,7 @@ high-performance direct routing inside a subnet and still enables you to route
 across subnets, at the cost of some encapsulation.
 
 <img src="https://octetz.s3.us-east-2.amazonaws.com/direct-and-ipip-flow.png"
-class="center" width="600">
+class="center">
 
 To enable this, update the IPPool as follows.
 

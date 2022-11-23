@@ -52,7 +52,7 @@ new diagram below.
 kubeadm init --experimental-upload-certs
 ```
 
- <img src="https://octetz.s3.us-east-2.amazonaws.com/master2.png" width="600">
+ <img src="https://octetz.s3.us-east-2.amazonaws.com/master2.png">
 
 When the kubeadm token expires, so does the `kubeadm-certs` secret. Also,
 whenever the `init phase upload-certs` is run, a new encryption key is created.

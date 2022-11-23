@@ -84,11 +84,11 @@ guide using Window 8. To create installation media directly from an ISO, conside
 
 1. Verify UEFI booting is enabled.
 
-   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/uefionly.png" width="600">
+   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/uefionly.png">
 
 1. Verify Secure Boot is disabled.
 
-   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/secure-boot.png" width="600">
+   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/secure-boot.png">
 
     > Arch Linux can be installed with Secure Boot. See 
       https://wiki.archlinux.org/index.php/Secure_Boot
@@ -109,7 +109,7 @@ EFI partition. Using VeraCrypt, the Windows partition will be encrypted.
 
 1. Select the USB device in UEFI mode.
 
-   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/select-windows-usb.png" width="600">
+   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/select-windows-usb.png">
 
     > If you boot in legacy mode, the Arch UEFI installation will **not** work.
 
@@ -125,15 +125,15 @@ EFI partition. Using VeraCrypt, the Windows partition will be encrypted.
 
 1. Delete all existing partitions.
 
-   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/deleted-windows-partitions.png" width="600">
+   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/deleted-windows-partitions.png">
 
 1. Create a new partition of the size you'd like Windows to occupy.
 
-   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/click-new-windows.png" width="250">
+   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/click-new-windows.png">
 
     > Windows creates additoinal partitions including the 100.0MB System partition that will act as the EFI partition.  1. Click Next and wait for Windows to install.
 
-   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/windows-made-partitions.png" width="250">
+   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/windows-made-partitions.png">
 
     > After the installation completes, the machine will reboot.
 
@@ -145,7 +145,7 @@ EFI partition. Using VeraCrypt, the Windows partition will be encrypted.
 
 1. In the top right search, enter `power`.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/control-panel.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/control-panel.png">
 
 1. Click `Change what the power buttons do`.
 
@@ -153,7 +153,7 @@ EFI partition. Using VeraCrypt, the Windows partition will be encrypted.
 
 1. Uncheck `Turn on fast startup (recommended)`.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/disable-fast-startup.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/disable-fast-startup.png">
     
 
     > To understand why fast startup is not recommended, see 
@@ -171,19 +171,19 @@ EFI partition. Using VeraCrypt, the Windows partition will be encrypted.
 
 1. From the menu bar, open System > Encrypt System Partition/Drive
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/veracrypt-encrypt-system.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/veracrypt-encrypt-system.png">
 
 1. Choose Normal.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/veracrypt-normal.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/veracrypt-normal.png">
 
 1. Choose Encrypt the Windows system partition.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/encrypt-system-part.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/encrypt-system-part.png">
 
 1. Choose Single-boot.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/single-boot.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/single-boot.png">
 
     > While you will have a multi-boot system eventually. This installation will have grub point
       to veracrypt that will then decrypt and point to windows. Thus, vercrypt needs to know 
@@ -211,7 +211,7 @@ EFI partition. Using VeraCrypt, the Windows partition will be encrypted.
 
 1. VeraCrypt will pop back up to tell you the Pretest Completed.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/encrypt.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/encrypt.png">
 
 1. Click Encrypt and run the encryption.
 
@@ -219,7 +219,7 @@ EFI partition. Using VeraCrypt, the Windows partition will be encrypted.
 
 1. Allow the encryption to complete.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/encrypting.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/encrypting.png">
 
 1. Power off the machine.
 
@@ -244,7 +244,7 @@ will be encrypted.
 
 1. Add `nomodeset video=1280x760` to the list of commands.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/nodemodeset.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/nodemodeset.png">
 
     > This boots the installer in lower resolution making the console easier to see.
 
@@ -280,7 +280,7 @@ make your experience better.**
     systemctl start sshd
     ```
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/ssh-install.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/ssh-install.png">
 
 1. Determine your local address using `ip a`.
 
@@ -290,7 +290,7 @@ make your experience better.**
     ssh root@${TARGET_MACHINE_IP}
     ```
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/in-other-machine.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/in-other-machine.png">
 
     > From this point forward, I'm completing the installation from another
     > Linux desktop. You can also use Windows (putty) or Mac.
@@ -325,7 +325,7 @@ make your experience better.**
 
 1. Choose `[  New  ]`.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/cgdisk1.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/cgdisk1.png">
 
 1. Enter no value for First sector (chooses default).
 
@@ -344,7 +344,7 @@ make your experience better.**
 
 1. Name the partition `boot`.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/cgdisk2.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/cgdisk2.png">
 
 1. Note the partition number of the EFI System partition. This will be referenced later when
 configuring grub. In the screenshots above, it is partition 2.
@@ -363,7 +363,7 @@ configuring grub. In the screenshots above, it is partition 2.
 
 1. Name the partition `root`.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/cgdisk3.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/cgdisk3.png">
 
 1. Choose `[   Write   ]` and say yes.
 
@@ -553,7 +553,7 @@ section covers setup and generation of an mkinitcpio configuration for generatin
     blkid
     ```
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/uuid.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/uuid.png">
 
 2. Edit the GRUB boot loader configuration.
 

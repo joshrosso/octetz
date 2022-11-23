@@ -184,17 +184,17 @@ volume.
 
 1. Delete all existing partitions.
 
-   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/deleted-windows-partitions.png" width="600">
+   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/deleted-windows-partitions.png">
 
 1. Create a new partition of the size you'd like Windows to occupy.
 
-   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/click-new-windows.png" width="250">
+   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/click-new-windows.png">
 
     > Windows creates additoinal partitions including the 100.0MB System partition that will act as the EFI partition.  
 
 1. Click Next and wait for Windows to install.
 
-   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/windows-made-partitions.png" width="250">
+   <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/windows-made-partitions.png">
 
     > After the installation completes, the machine will reboot.
 
@@ -210,7 +210,7 @@ with partitions shared between Windows and Linux. To disable fast boot:
 
 1. In the top right search, enter `power`.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/control-panel.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/control-panel.png">
 
 1. Click `Change what the power buttons do`.
 
@@ -218,7 +218,7 @@ with partitions shared between Windows and Linux. To disable fast boot:
 
 1. Uncheck `Turn on fast startup (recommended)`.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/disable-fast-startup.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/disable-fast-startup.png">
     
 
     > To understand why fast startup is not recommended, see 
@@ -244,19 +244,19 @@ and Windows is booted. To encrypt the Window volume:
 
 1. From the menu bar, open System > Encrypt System Partition/Drive
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/veracrypt-encrypt-system.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/veracrypt-encrypt-system.png">
 
 1. Choose Normal.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/veracrypt-normal.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/veracrypt-normal.png">
 
 1. Choose Encrypt the Windows system partition.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/encrypt-system-part.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/encrypt-system-part.png">
 
 1. Choose Single-boot.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/single-boot.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/single-boot.png">
 
     > While you will have a multi-boot system eventually. This installation will have grub point
       to veracrypt that will then decrypt and point to windows. Thus, vercrypt needs to know 
@@ -284,7 +284,7 @@ and Windows is booted. To encrypt the Window volume:
 
 1. VeraCrypt will pop back up to tell you the Pretest Completed.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/encrypt.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/encrypt.png">
 
 1. Click Encrypt and run the encryption.
 
@@ -292,7 +292,7 @@ and Windows is booted. To encrypt the Window volume:
 
 1. Allow the encryption to complete.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/encrypting.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/encrypting.png">
 
 1. Power off the machine.
 
@@ -360,7 +360,7 @@ more. To setup `ssh` and finish the install from another host:
 
     > This may be enabled by default.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/ssh-install.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/ssh-install.png">
 
 1. Determine your local address using `ip a`.
 
@@ -370,7 +370,7 @@ more. To setup `ssh` and finish the install from another host:
     ssh root@${TARGET_MACHINE_IP}
     ```
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/in-other-machine.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/in-other-machine.png">
 
 ### Disk Partitioning
 
@@ -402,7 +402,7 @@ more. To setup `ssh` and finish the install from another host:
 
 1. Choose `[  New  ]`.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/cgdisk1.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/cgdisk1.png">
 
 1. Enter no value for First sector (chooses default).
 
@@ -421,7 +421,7 @@ more. To setup `ssh` and finish the install from another host:
 
 1. Name the partition `boot`.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/cgdisk2.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/cgdisk2.png">
 
 1. Note the partition number of the EFI System partition. This will be referenced later when
 configuring grub. In the screenshots above, it is partition 2. On **Windows
@@ -441,7 +441,7 @@ configuring grub. In the screenshots above, it is partition 2. On **Windows
 
 1. Name the partition `root`.
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/cgdisk3.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/cgdisk3.png">
 
 1. Choose `[   Write   ]` and say yes.
 
@@ -651,7 +651,7 @@ familiarity. To setup `grub`:
     blkid
     ```
 
-    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/uuid.png" width="600">
+    <img src="https://octetz.s3.us-east-2.amazonaws.com/linux-windows-install/uuid.png">
 
 1. Edit the GRUB boot loader configuration.
 
