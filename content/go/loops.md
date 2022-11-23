@@ -4,6 +4,8 @@ date: 2022-11-16T10:41:11-07:00
 draft: false
 ---
 
+# Loops
+
 The `for` keyword creates loops. Go's standard library does not include
 alternative loop styles such as while, do, or [higher-order function
 mapping](https://en.wikipedia.org/wiki/Map_(higher-order_function)). By
@@ -55,7 +57,7 @@ _[Go playground example](https://go.dev/play/p/ctFDWtRPhTB)_
 
 ## Range based (for each)
 
-The `range` keyword can accompany `for` to iterate over lists or maps.
+The `range` keyword can accompany `for` to iterate over lists and maps.
 This is simlar to a [foreach loop](https://en.wikipedia.org/wiki/Foreach_loop)
 in other languages. Here is an example iterating over a list of names:
 

@@ -121,10 +121,10 @@ div {
   top: 10px;
   width: var(--right-nav-width);
   height: 300px;
+  font-size: 12px;
 }
 
 .right-nav ul {
-  font-size: 12px;
   list-style-type: decimal;
   padding-inline-start: 1rem;
 }
@@ -147,6 +147,12 @@ div {
 
 p.toc-title {
   padding-bottom: 14px;
+  font-weight: 800;
+  border-bottom: thin solid var(--border-color);
+}
+
+p.toc-separator {
+  margin-top: 0;
   font-weight: 800;
   border-bottom: thin solid var(--border-color);
 }
@@ -222,7 +228,7 @@ hr {
   :root {
     --header-link-color: #fff;
     --logo-fill-color: #fff;
-    --header-bg-color: #000;
+    --header-bg-color: #1c1c1c;
     --border-color: #4e4e4e;
     --bg-color: #1b1b1b;
     --text-color: #fff;
