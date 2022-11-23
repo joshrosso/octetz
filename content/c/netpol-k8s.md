@@ -97,8 +97,8 @@ spec:
 Traffic is allowed from `team-a` to `team-b`. Traffic is also accepted by
 `team-a` when trying to reach it on port 80.
 
-{{< img class="center"
-src="https://octetz.s3.us-east-2.amazonaws.com/netpol-s-1.png"  >}}
+<img class="center"
+src="https://octetz.s3.us-east-2.amazonaws.com/netpol-s-1.png" >
 
 The above demonstrates the impact this policy has on the cluster. Since `team-a`
 accepts all ingress on port `80`, `team-b` can egress to it. `team-a` is also
@@ -110,8 +110,8 @@ allowed. `team-b` on the other hand can reach `google.com` as there is no
 Interestingly, if you were to move `team-b` into the same namespace as `team-a`,
 `team-b` would no longer be able to send traffic to `team-a`.
 
-{{< img class="center"
-src="https://octetz.s3.us-east-2.amazonaws.com/netpol-s-2.png"  >}}
+<img class="center"
+src="https://octetz.s3.us-east-2.amazonaws.com/netpol-s-2.png" >
 
 Now that `team-b` is part of the `org-1` namespace, it is beholden to the
 implicit deny brought on by the policy. It can no longer accept ingress and its
@@ -134,8 +134,8 @@ spec:
       app: team-a
 ```
 
-{{< img class="center"
-src="https://octetz.s3.us-east-2.amazonaws.com/netpol-s-3.png"  >}}
+<img class="center"
+src="https://octetz.s3.us-east-2.amazonaws.com/netpol-s-3.png" >
 
 Now the implicit denial rules are scoped to `team-a`. `team-b` (and pods without
 the label `app: team-a`) can accept ingress and create egress traffic freely.
@@ -270,7 +270,7 @@ DATASTORE_TYPE=kubernetes \
 > `calicoctl` is available for [download on
 > github](https://github.com/projectcalico/calicoctl/releases).
 
-{{< img class="center" src="https://octetz.s3.us-east-2.amazonaws.com/global-netpol-s-1.png"  >}}
+<img class="center" src="https://octetz.s3.us-east-2.amazonaws.com/global-netpol-s-1.png" >
 
 As seen above, this would block all egress and ingress traffic in namespaces
 outside of `kube-system`. With the exception of DNS traffic (`UDP:53`). This one
@@ -294,7 +294,7 @@ spec:
   - Egress
 ```
 
-{{< img class="center" src="https://octetz.s3.us-east-2.amazonaws.com/global-netpol-s-2.png"  >}}
+<img class="center" src="https://octetz.s3.us-east-2.amazonaws.com/global-netpol-s-2.png" >
 
 Now the `team-a` pod can egress to `google.com`. It can also egress to `team-b`,
 but due to the `GlobalNetworkPolicy`, `team-b` is not accepting ingress traffic.

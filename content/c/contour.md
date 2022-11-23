@@ -23,8 +23,8 @@ The controller (named contour) is responsible for reading Ingress and
 IngressRoute objects and creating a directed acyclic graph (DAG). Contour can
 then communicate with the Envoy container to program routes to pods.
 
-{{< img class="center"
-src="https://octetz.s3.us-east-2.amazonaws.com/pod-contour.png" width="200" >}}
+<img class="center"
+src="https://octetz.s3.us-east-2.amazonaws.com/pod-contour.png" width="200">
 
 Contour is typically deployed in a cluster as a Deployment or Daemonset. We just
 need to determine how to route to the Envoy instances. To send traffic to them,
@@ -86,8 +86,8 @@ So let us look at a specific use case, canary deployments. What if we want to
 weight and slowly bleed traffic over to a new pingv2 application? Considering
 the following diagram.
 
-{{< img class="center"
-src="https://octetz.s3.us-east-2.amazonaws.com/canary.png" width="600" >}}
+<img class="center"
+src="https://octetz.s3.us-east-2.amazonaws.com/canary.png" width="600">
 
 For use cases that are more advanced than what the Ingress API supports
 natively, Contour introduces the
@@ -131,9 +131,9 @@ shared-ingress layer. Meaning a set of load balancers and controllers run inside
 the cluster offering layer 7 routing to different team's workloads. Consider the
 following running in a cluster.
 
-{{< img class="center"
+<img class="center"
 src="https://octetz.s3.us-east-2.amazonaws.com/ingress-multi-team.png"
-width="600" >}}
+width="600">
 
 Notice the `host` value highlighted in yellow in the `team-a` and `team-b`
 namespaces. Both attempt to define routing rules for the host `a.team.com`. Each
@@ -154,8 +154,8 @@ delegation rules for the ingress rules requested by other teams or namespaces.
 Consider the following, revised, model.
 
 
-{{< img class="center"
-src="https://octetz.s3.us-east-2.amazonaws.com/delegation.png" width="800" >}}
+<img class="center"
+src="https://octetz.s3.us-east-2.amazonaws.com/delegation.png" width="800">
 
 In the above, you can see a new namespace, `ingress-system`. This namespace
 contains delegation rules for the FQDN and routes a namespace is allowed to
@@ -214,8 +214,8 @@ certificate. This is often a wildcard certificate that can be used across the
 entire organization. The following diagram details these different means of
 certificate resolution.
 
-{{< img class="center" src="https://octetz.s3.us-east-2.amazonaws.com/cert.png"
-width="600" >}}
+<img class="center" src="https://octetz.s3.us-east-2.amazonaws.com/cert.png"
+width="600">
 
 This approach can be limiting, especially when operating under the following
 constraints.
@@ -231,7 +231,7 @@ constraints.
 Similar to route delegation, we can introduce TLSCertificateDelegation objects
 to solve these problems. Consider the following diagram.
 
-{{< img class="center"
+<img class="center"
 src="https://octetz.s3.us-east-2.amazonaws.com/tls-delegation.png" width="400"
 >}}
 

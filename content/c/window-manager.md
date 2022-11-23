@@ -12,8 +12,6 @@ aliases:
 
 Conversations around window managers can be a little contentious...but for some of us, it makes very little difference. I'm one of those humans. As much as I adore nerding out around some ultra-minimal window manager that requires you change settings by compiling its c code, at the end of the day I gain little benefit from any specific approach.
 
-{{< youtube AK2UKUfsV3g >}}
-
 That said, I do love and prefer Linux. The fact that we're afforded these choices around window managers is what draws many of us in initially. Your computer, whether running Ubuntu or Arch, can flip a switch to run a very capable, heavy-weight manager such as [KDE](https://kde.org/) or a manager with a binary size of ~1mb, such as [dwm](https://dwm.suckless.org/). Before diving too deep into my day-to-day workflow, let's set some primer around window managers.
 
 ## Window Managers

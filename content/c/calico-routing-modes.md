@@ -27,7 +27,7 @@ For this demonstration, I have setup the following architecture in AWS. The
 terraform is [here](https://github.com/octetz/calico-routing/blob/master/servers.tf).  The Calico deployment is
 [here](https://raw.githubusercontent.com/octetz/calico-routing/master/calico.yaml).
 
-{{< img src="https://octetz.s3.us-east-2.amazonaws.com/calico-aws-architecture.png" class="center" width="600">}}
+<img src="https://octetz.s3.us-east-2.amazonaws.com/calico-aws-architecture.png" class="center" width="600">}}
 
 For simplicity, there is only 1 master node. Worker nodes are spread across
 availability zones in 2 different subnets. There will be 2 worker nodes in
@@ -70,8 +70,8 @@ By default, Calico uses
 routes amongst hosts. Calico-node pods run on every host. Each calico-node peers
 together.
 
-{{< img src="https://octetz.s3.us-east-2.amazonaws.com/routes.png"
-class="center" >}}
+<img src="https://octetz.s3.us-east-2.amazonaws.com/routes.png"
+class="center">
 
 The calico-node container hosts 2 processes.
 
@@ -156,9 +156,9 @@ inside another. A transmitted packet contains an outer header with **host**
 source and destination IPs and an inner header with **pod** source and
 destination IPs.
 
-{{< img
+<img
 src="https://upload.wikimedia.org/wikipedia/commons/2/2d/IPTunnelDiagram_01-12-07.jpg"
-class="center" width="600" >}}
+class="center" width="600">
 
 In IP-in-IP mode, `worker-1`'s route table is as follows. 
 
@@ -167,9 +167,9 @@ In IP-in-IP mode, `worker-1`'s route table is as follows.
 sudo route
 ```
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/calico-route-table-ipip.png"
-class="center" >}}
+class="center">
 
 Below is a packet sent from pod-1 to pod-2.
 
@@ -178,9 +178,9 @@ Below is a packet sent from pod-1 to pod-2.
 curl 192.168.133.194
 ```
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/calico-ipip-wireshark-data.png"
-class="center" >}}
+class="center">
 
 IP-in-IP also features a selective mode. It is used when only routing between
 subnets requires encapsulation. I’ll explore this in the next section. 
@@ -235,9 +235,9 @@ On `worker-1`, the route table is updated.
 route -n
 ``` 
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/calico-route-table-direct.png"
-class="center" >}}
+class="center">
 
 2 important changes are:
 
@@ -262,8 +262,8 @@ curl: (28) Connection timed out after 10001 milliseconds
 Packets are blocked because src/dst checks are enabled. To fix this, disable these
 checks on every host in AWS. 
 
-{{< img src="https://octetz.s3.us-east-2.amazonaws.com/aws-src-dst-check.png"
-class="center" width="600" >}}
+<img src="https://octetz.s3.us-east-2.amazonaws.com/aws-src-dst-check.png"
+class="center" width="600">
 
 Traffic is now routable between `pod-1` and `pod-2`. The wireshark output is as
 follows.
@@ -272,9 +272,9 @@ follows.
 curl -v4 192.168.133.194
 ``` 
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/calico-direct-wireshark-data.png"
-class="center" >}}
+class="center">
 
 However, communication between `pod-1` and `pod-3` now fails. 
 
@@ -296,8 +296,8 @@ Calico to only use IP-in-IP when crossing a subnet boundary. This gives you
 high-performance direct routing inside a subnet and still enables you to route
 across subnets, at the cost of some encapsulation.
 
-{{< img src="https://octetz.s3.us-east-2.amazonaws.com/direct-and-ipip-flow.png"
-class="center" width="600" >}}
+<img src="https://octetz.s3.us-east-2.amazonaws.com/direct-and-ipip-flow.png"
+class="center" width="600">
 
 To enable this, update the IPPool as follows.
 
@@ -321,9 +321,9 @@ calicoctl apply -f ippool.yaml
 
 Now routing between all pods works! Examining `worker-1`'s route table: 
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/calico-route-table-ipip-crosssubnet.png"
-class="center" >}}
+class="center">
 
 The `tunl0` interface is reintroduced for routing to `worker-3`.
 
@@ -399,16 +399,16 @@ kubectl apply -f calico.yaml
 
 With VXLAN enabled, you can now see changes to the route tables. 
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/vxlan-tunnel-interfaces.png"
-class="center" >}}
+class="center">
 
 Inspecting the packets shows the VXLAN-style encapsulation and how it differs
 from IP-in-IP. 
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/vxlan-tunnel-wireshark.png"
-class="center" >}}
+class="center">
 
 ## Summary 
 

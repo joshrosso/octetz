@@ -21,8 +21,8 @@ works.
 `kubeadm init` initializes a Kubernetes cluster by standing up a single master.
 After running the command, you end up with the following.
 
- {{< img src="https://octetz.s3.us-east-2.amazonaws.com/master.png" width="400"
- >}}
+ <img src="https://octetz.s3.us-east-2.amazonaws.com/master.png" width="400"
+>
 
 > This represents the default. Through additional configuration, `kubeadm init`
 > can behave differently, such as reusing an existing etcd cluster.
@@ -52,7 +52,7 @@ new diagram below.
 kubeadm init --experimental-upload-certs
 ```
 
- {{< img src="https://octetz.s3.us-east-2.amazonaws.com/master2.png" width="600" >}}
+ <img src="https://octetz.s3.us-east-2.amazonaws.com/master2.png" width="600">
 
 When the kubeadm token expires, so does the `kubeadm-certs` secret. Also,
 whenever the `init phase upload-certs` is run, a new encryption key is created.

@@ -28,7 +28,7 @@ Java 13 docs, you can visit
 To load this into Intellij, you open `File > Project Structure`. From there you
 select your SDK and add a remote documentation path, as shown below.
 
-{{< img class="center"
+<img class="center"
 src="https://octetz.s3.us-east-2.amazonaws.com/loading-local-jdk-docs/intellij-java.png"
 >}}
 
@@ -47,7 +47,7 @@ I can tell, Oracle only keeps LTS and current Java version docs linked on their
 site.  I did find some StackOverflow posts with links to things like Java
 12...but you may just want to choose the closest version. 
 
-{{< img class="center"
+<img class="center"
 src="https://octetz.s3.us-east-2.amazonaws.com/loading-local-jdk-docs/java-version-table.png"
 >}}
 
@@ -55,7 +55,7 @@ In my case, I'm using Java 13. So I headed to the Java SE Development Kit
 Downloads page at
 [https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html](https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html). 
 
-{{< img class="center"
+<img class="center"
 src="https://octetz.s3.us-east-2.amazonaws.com/loading-local-jdk-docs/downloads.png"
 >}}
 
@@ -69,7 +69,7 @@ information..._rolls eyes_.
 From this page, if you scroll to the bottom, you'll see an **Additional
 Resources** section.
 
-{{< img class="center"
+<img class="center"
 src="https://octetz.s3.us-east-2.amazonaws.com/loading-local-jdk-docs/javadocs.png"
 >}}
 
@@ -108,21 +108,21 @@ In Intellij, return to `File > Project Structure > SDKs > Documentation Paths`
 and click the plus sign. You can then select the location of your new `docs`
 folder as seen below.
 
-{{< img class="center"
+<img class="center"
 src="https://octetz.s3.us-east-2.amazonaws.com/loading-local-jdk-docs/intellij-java-local.png"
 >}}
 
 Now, if you use something in the standard library, you should be able to call
 for external documentation.
 
-{{< img class="center"
+<img class="center"
 src="https://octetz.s3.us-east-2.amazonaws.com/loading-local-jdk-docs/external-docs.png"
 >}}
 
 Upon selecting this option, a browser window will open pointed to the JavaDocs
 on your local machine.
 
-{{< img class="center"
+<img class="center"
 src="https://octetz.s3.us-east-2.amazonaws.com/loading-local-jdk-docs/local-javadoc-browser.png"
 >}}
 
@@ -137,16 +137,16 @@ to download documentation. There is also an option to download documentation and
 sources, which I recommend as it'll prevent you from needing to decompile
 bytecode in order to goto code in the libraries you are calling.
 
-{{< img class="center"
+<img class="center"
 src="https://octetz.s3.us-east-2.amazonaws.com/loading-local-jdk-docs/maven-panel.png"
 >}}
 
 With this complete, you can now select code or annotations from a library you're
 calling and produce the relevant JavaDoc. As seen below.
 
-{{< img class="center"
+<img class="center"
 src="https://octetz.s3.us-east-2.amazonaws.com/loading-local-jdk-docs/spring-javadoc.png"
-width="800" >}}
+width="800">
 
 I hope you found this post useful! Or at least educational as to how hard
 setting up something as simple as local JDK docs can be. Good luck with your

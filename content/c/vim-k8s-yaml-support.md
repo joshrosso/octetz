@@ -29,8 +29,8 @@ golang language server and how it can also be used in
 [vim](octetz.com/docs/2019/2019-04-24-vim-as-a-go-ide/). For Kubernetes YAML
 completion the flow is similar.
 
-{{< img src="https://octetz.s3.us-east-2.amazonaws.com/lsp-kube-vim.png"
-class="center" width="600" >}}
+<img src="https://octetz.s3.us-east-2.amazonaws.com/lsp-kube-vim.png"
+class="center" width="600">
 
 For vim to operate as described, you need a language server client. The two ways
 I am aware of are
@@ -63,7 +63,7 @@ With coc.vim setup, install the coc-yaml server extension from within vim.
 
 
 
-{{< img src="https://octetz.s3.us-east-2.amazonaws.com/coc-yaml-install.gif" class=“center" >}}
+<img src="https://octetz.s3.us-east-2.amazonaws.com/coc-yaml-install.gif" class=“center">
 
 Lastly, you’ll likely want to start with the coc-vim config mappings found in
 the [example
@@ -114,9 +114,9 @@ available fields and documentation.
 
 
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/vim-yaml-pod-autocomplete-demo.gif"
-class=“center" >}}
+class=“center">
 
 > ctrl + space works here because I have set `inoremap <silent><expr> <c-space>
 > coc#refresh()`, if you haven’t, visit the [coc.nvim
@@ -170,9 +170,9 @@ which wasn’t available in the 1.14 schema.
 
 
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/vim-startup-probe-yaml.png"
-class=“center" >}}
+class=“center">
 
 ## Summary
 

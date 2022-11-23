@@ -16,8 +16,6 @@ more hypervisors to your homelab or datacenter, you will likely want VMs to
 be routable to the larger LAN. Exploring these network models and routability
 will be the focus of this post.
 
-{{< youtube 6435eNKpyYw >}}
-
 When using a stack like libvirt/qemu/kvm, there are multiple network models
 available to you. Libvirt provides a "default" network, which enables VMs to be
 routable within their host (hypervisor). In order to make VMs routable to the
@@ -69,8 +67,8 @@ With the `Default` network started, a few key things have occurred.
 
 Visually, these changes and wiring looks as follows.
 
-{{< img
-src="https://octetz.s3.us-east-2.amazonaws.com/vm-net/default-bridge-wiring.png" >}}
+<img
+src="https://octetz.s3.us-east-2.amazonaws.com/vm-net/default-bridge-wiring.png">
 
 Now you can start VMs that use the `Default` network. If you're spinning up new
 VMs, assuming you don't modify network settings, it's likely `Default` will be
@@ -137,8 +135,8 @@ $ virsh net-dhcp-leases default
 With the above two VMs running, a high-level look at the network is the
 following.
 
-{{< img
-src="https://octetz.s3.us-east-2.amazonaws.com/vm-net/default-net-arch.png" >}}
+<img
+src="https://octetz.s3.us-east-2.amazonaws.com/vm-net/default-net-arch.png">
 
 A primary issue with this network layout is the VM network is entirely isolated
 from the LAN network the host is connected to. If you took the above host and
@@ -274,8 +272,8 @@ PING google.com (172.217.11.238) 56(84) bytes of data.
 With all the current pieces in place, you now have the following components
 wired up.
 
-{{< img
-src="https://octetz.s3.us-east-2.amazonaws.com/vm-net/full-br-arch.png" >}}
+<img
+src="https://octetz.s3.us-east-2.amazonaws.com/vm-net/full-br-arch.png">
 
 Now you have a bridge network setup that VMs can be attached to! If you are
 ready to start attaching VMs, skip ahead to the *Attaching VMs to the Bridge*
@@ -367,11 +365,11 @@ If you have a fancy managed switch, you can likely log into its management panel
 and see that on a single port the hypervisor and VMs are both seen as unique MAC
 addresses.
 
-{{< img
-src="https://octetz.s3.us-east-2.amazonaws.com/vm-net/switch-wiring.png" >}}
+<img
+src="https://octetz.s3.us-east-2.amazonaws.com/vm-net/switch-wiring.png">
 
 Now that everything is wired together, you now have a network setup that looks
 as follows.
 
-{{< img
-src="https://octetz.s3.us-east-2.amazonaws.com/vm-net/full-arch.png" >}}
+<img
+src="https://octetz.s3.us-east-2.amazonaws.com/vm-net/full-arch.png">

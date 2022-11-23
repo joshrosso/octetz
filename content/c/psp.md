@@ -241,7 +241,7 @@ operating in selective namespaces such as `kube-system`. The diagram below
 demonstrates a hypothetical resolution path for creating a `kube-proxy` pod on
 behalf of the `daemonset-controller`.
 
-{{< img src="https://octetz.s3.us-east-2.amazonaws.com/rbac-flow.png" >}}
+<img src="https://octetz.s3.us-east-2.amazonaws.com/rbac-flow.png">
 
 The flow above exists to help conceptually model policy resolution. Don't expect
 it to be accurate to the code/execution path.

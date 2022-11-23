@@ -54,8 +54,8 @@ definition). This maintains consistency in how these tasks are executed across
 languages without new plugins. All you need is a language server. The breakdown
 of responsibilities is as follows.
 
-{{< img class="center"
-src="https://octetz.s3.us-east-2.amazonaws.com/vim-go-resp.png" >}}
+<img class="center"
+src="https://octetz.s3.us-east-2.amazonaws.com/vim-go-resp.png">
 
 The two best client options are [Conquer of Completion
 (coc.nvim)](https://github.com/neoclide/coc.nvim) and
@@ -203,7 +203,7 @@ In order to follow this setup, you need to complete following.
     * `:GoDocBrowser` over a symbol to open godoc.org.
     * `:GoBuild` to build the project.
 
-{{< img class="center" src="https://octetz.s3.us-east-2.amazonaws.com/vim-go.gif" >}}
+<img class="center" src="https://octetz.s3.us-east-2.amazonaws.com/vim-go.gif">
 
 ## Installing coc.nvim
 
@@ -397,7 +397,7 @@ In order to follow this setup, you need to complete following.
 
       * `space + a` is a shortcut for this.
 
-{{< img class="center" src="https://octetz.s3.us-east-2.amazonaws.com/coc-vim.gif" >}}
+<img class="center" src="https://octetz.s3.us-east-2.amazonaws.com/coc-vim.gif">
 
 ## Play Around!
 

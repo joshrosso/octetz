@@ -9,8 +9,6 @@ images:
 
 # Navigating OCI Artifacts and Images
 
-{{< youtube XbUAPlZi0x0 >}}
-
 OCI's [image
 specification](https://github.com/opencontainers/image-spec/blob/main/spec.md)
 defines the contents and conventions of container images. This vendor-neutral
@@ -113,8 +111,8 @@ the platform and architecture of the target system. This feature enables all
 platforms and architectures to point to the same tag, even though each needs to
 run its own unique image, as detailed below.
 
-{{< img class="center"
-src="https://files.joshrosso.com/img/site/navigating-oci/multi-arch-pull.png" width=800" >}}
+<img class="center"
+src="https://files.joshrosso.com/img/site/navigating-oci/multi-arch-pull.png" width=800">
 
 To understand which images are available, use the `manifest` command. This also identifies exactly where the image lives. Below are the images for Linux arm64 and amd64.
 

@@ -30,7 +30,7 @@ for ensuring the number of pods created matches the desired count set in
 this controller functions.
 
 
-{{< img class="center"
+<img class="center"
 src="https://octetz.s3.us-east-2.amazonaws.com/k8s-controllers-vs-operators/control-loop.png"
 >}}
 
@@ -51,7 +51,7 @@ compares to the desired state. Then your controller takes the necessary step(s)
 to close the gap. The following diagram shows a simplified view of this model.
 
 
-{{< img class="center"
+<img class="center"
 src="https://octetz.s3.us-east-2.amazonaws.com/k8s-controllers-vs-operators/client-go-flow.png"
 >}}
 

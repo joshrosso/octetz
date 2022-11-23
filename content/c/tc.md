@@ -12,15 +12,13 @@ aliases:
 
 `tc` enables configuring Traffic Control in a Linux host. This low-level capability can be used for use cases such as implementing quality of service controls to simulating networking scenarios that can be helpful for test cases and validations of application deployments.
 
-{{< youtube Ylf4J736JIg >}}
-
 As such, `tc` is a gem inside of Linux that is worth knowing about in your tool chain. Over the years, I've used `tc` to solve some pretty obscure use cases. For example, needing to work around a lack of network QOS and ensuring a egress proxy never saturates specific networks based on what CIDR the destination lands in. Another is simulating packet loss to better understand how an application or server responds.
 
 ## Quality of Service
 
 To start off, we'll hone in on one use case, [quality of service (QoS)](https://en.wikipedia.org/wiki/Quality_of_service). You likely have seen QoS setting if you've ever setup a home network or router. Consider the following flow.
 
-{{< img src="https://octetz.s3.us-east-2.amazonaws.com/tc/qos.jpg" >}}
+<img src="https://octetz.s3.us-east-2.amazonaws.com/tc/qos.jpg">
 
 Here we have 2 types of theoretical quality of service settings. To the left of the router, we can see bandwidth limitations imposed on the source device. How we identify the source device may vary, but let's assume something such as the [MAC address](https://en.wikipedia.org/wiki/MAC_address) is used. In the above, laptop-1 will be able to use up to 100mbps, while the device named guest-2 will be limited to 10mbps. On the more complicated end, to the right of the router, we can see outbound throttling happening based on CIDR ranges. In this case, we can assume there is an upper limit for all outbound traffic of 1500mbps. This can be thought of as a quota of available bandwidth owned by the "parent". The children are paths that go to the internal network `10.30.0.0/16` and all other outbound traffic `0.0.0.0/0`. In this case, we may want the children to borrow as much bandwidth as is available from the parent. When under contention, we may want to ensure the route to `10.30.0.0/16` is prioritized to receive 1000mbps, even if that means throttling the traffic out to `0.0.0.0/0`.
 
@@ -38,7 +36,7 @@ Traffic Control, operated via `tc`, enables us to implement these use cases, and
 
 Let's now take a look at what these pieces put together might looks like.
 
-{{< img src="https://octetz.s3.us-east-2.amazonaws.com/tc/tree.jpg" width="650" class="img-center" >}}
+<img src="https://octetz.s3.us-east-2.amazonaws.com/tc/tree.jpg" width="650" class="img-center">
 
 Here we can see a root qdisc, identified as `1:0`. This ID is important as it enables us to define it as the parent of other qiscs. The first leaf is the classful qdisc `2:1`. In this example, we're assuming it has a total bandwidth of 100mbits. The leaves under that, `1:10` and `1:30`, can be considered children of `1:1` and can each transmit up to 80mbits. As children of `1:1`, they will be able to borrow, from their base rate, up to 100mbits. If `1:10` and `1:30` were transmitting at full speed, we'd have 160mbits, which would exceed what can be borrowed from the parent. This is an example, where throttling between the two would occur. In that scenario, we'd expect `1:10` and `1:30`'s transmission rate to drop to 50mbps each. Finally, towards the top, you can see the blue filters being specified. These are essentially looking at the source IP and articulating if traffic is destine for a specific host `u0` or `u1`, the packet will end up queued into `1:10` or `1:30`.
 

@@ -23,7 +23,7 @@ been making noise in the community for some time now, especially with their use
 of eBPF to facilitate routing. A talk by Martynas Pumputis identified the
 standard path of a request with Kubernetes default service mode, iptables.
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/k8s-kubecon-sd-review/packetflow.png"
 >}}
 
@@ -32,7 +32,7 @@ complex, unreadable chain rules. Cilium makes many operations to determine what
 to do with routing map lookups. Essentially moving to O(1) with common
 operations.
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/k8s-kubecon-sd-review/packetflowebpf.png"
 >}}
 
@@ -40,7 +40,7 @@ iptables works and we can generally assume Linux hosts will have it. It was a
 great choice for Kubernetes to use initially. Cilium's argument is that removal
 of iptables usage promotes scalability.
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/k8s-kubecon-sd-review/perf.png"
 >}}
 
@@ -59,7 +59,7 @@ waiting to see how Cilium will try to capitalize on this. This Kubecon, they
 announced Hubble, which attempts to provide observability to your pod/container
 traffic.
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/k8s-kubecon-sd-review/hubble.png"
 >}}
 
@@ -67,7 +67,7 @@ This is **super** interesting. Introducing a solid introspection toolset that
 anyone running Cilium can use would be a high value add for those evaluating
 open-source CNI-plugin options. The UI looks pretty solid at first glance.
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/k8s-kubecon-sd-review/hubbleservicemap.png"
 >}}
 
@@ -94,7 +94,7 @@ have better introspection of how a workload is rolled out. Intuit demonstrated
 how they were able to do this to facilitate more controlled continuous delivery
 coined progressive delivery.
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/k8s-kubecon-sd-review/pdelivery.png"
 >}}
 
@@ -103,14 +103,14 @@ specific details to determine whether you can continue to rollout or need to
 rollback. In the same talk, Intuit showed how you can facilitate a canary
 rollout with specific steps.
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/k8s-kubecon-sd-review/canaryintuit.png"
 >}}
 
 The template referenced here has many advanced capabilities. Namely the ability
 to run a Prometheus query to determine the health of a rollout.
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/k8s-kubecon-sd-review/analytemp.png"
 >}}
 
@@ -143,7 +143,7 @@ Pintrest demonstrated their introduction of CRDs. These enabled developers to
 provide basic details about their apps that a controller could take and
 translate into the 300+ lines of YAML it takes to get it up and running.
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/k8s-kubecon-sd-review/pin.png"
 >}}
 
@@ -153,7 +153,7 @@ and Mesos. This way, where workloads landed was completely transparent to
 developers. It would also enable them to move off of Mesos over time with no
 migration overhead.
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/k8s-kubecon-sd-review/peloton.png"
 >}}
 

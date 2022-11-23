@@ -51,9 +51,9 @@ were eventually introduced to solve this problem. Most deploy instructions for
 these aforementioned services recommend deploying a daemonset. There are
 mentions throughout GitHub of historical intentions to remove static pods.
 
-{{< img class="center"
+<img class="center"
 src="https://octetz.s3.us-east-2.amazonaws.com/k8s-static-pods/tweet1.png"
-width="800" >}}
+width="800">
 
 When should you use them? I’d argue, almost never. If considering static pods,
 first determine whether a daemonset is adequate. Daemonsets are entirely managed
@@ -77,9 +77,9 @@ exists. A classic chicken and the egg dilemma. Static pods solve this.
 IoT and Edge deployments are newer cases that I haven’t seen in the wild yet,
 but may benefit from static pods. 
 
-{{< img class="center"
+<img class="center"
 src="https://octetz.s3.us-east-2.amazonaws.com/k8s-static-pods/tweet2.png"
-width="800" >}}
+width="800">
 
 _redacted for brevity, full comment
 [here](https://github.com/kubernetes/kubeadm/issues/1541#issuecomment-488112516)._

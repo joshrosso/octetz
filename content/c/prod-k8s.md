@@ -17,8 +17,6 @@ fact, this will be my **only** new content for 2021. However, this is a **big**
 piece of content! I'm ecstatic to be writing about (albeit late) my book
 Production Kubernetes!
 
-{{< youtube OW8o70Mfnho  >}}
-
 This book was written alongside my co-workers [John
 Harris](https://twitter.com/johnharris85), Rich Lander, and [Alex
 Brand](https://twitter.com/alexbrand). I've worked with these humans

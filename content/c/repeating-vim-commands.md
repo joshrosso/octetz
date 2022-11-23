@@ -50,9 +50,9 @@ To start off, copy the following HTML into a file.
 This snippet is an older version of this website’s index. Assume you want to
 move the dates from the right to the left.
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/vim-recording-website-image.png"
-class="center" >}}
+class="center">
 
 There are many ways to accomplish this. For me, it’s fastest to run a few
 commands on each line to delete (and implicitly yank) the date and move it to
@@ -75,12 +75,12 @@ Now you’re ready to record commands using the identified pattern above to move
 the dates. In this section, i’ll walk you through each command and its impact.
 
 1. Set your cursor to the beginning of the first list element.
-2. Press `q` to start recording {{< img
+2. Press `q` to start recording <img
    src="https://octetz.s3.us-east-2.amazonaws.com/vim-recording-initial-q.png"
-   class="center" >}}
-1. Press `d` to assign the recording to your d key.  {{< img
+   class="center">
+1. Press `d` to assign the recording to your d key.  <img
    src="https://octetz.s3.us-east-2.amazonaws.com/vim-recording-save-to-d.png"
-   class="center" >}}
+   class="center">
 1. Press a key sequence that moves the date to the front of the line. My
    sequence is as follows.
     1. `|`: go to begging of line
@@ -92,9 +92,9 @@ the dates. In this section, i’ll walk you through each command and its impact.
     7. `/><`: place cursor at end of list element
     8. `p`: paste date after list element
     9. `j`: go to next line
-1. Press `q` to end the recording.  {{< img
+1. Press `q` to end the recording.  <img
    src="https://octetz.s3.us-east-2.amazonaws.com/vim-command-sequence.gif"
-   class="center" >}}
+   class="center">
 
 
 You've recorded that entire sequence under `d`. Admittedly, 1-9 above are
@@ -113,9 +113,9 @@ lines.
 1. Recall the command with `@d`.
 1. After recalling `@d`, you can instead hit `@@` to recall the last recalled
    recording.
-1. Continue this until all the lines are modified.  {{< img
+1. Continue this until all the lines are modified.  <img
    src="https://octetz.s3.us-east-2.amazonaws.com/recording-vim-recall.gif"
-   class="center" >}}
+   class="center">
 
 Just like that, you've run a repeatable, mundane, task across 9 lines of this
 file! You can imagine how helpful this can be if there were thousands of lines.
@@ -125,9 +125,9 @@ even more.
 1. Undo all the date modifications done to this file.
 1. Move your cursor to the first list element.
 1. Press `9@d` and hit enter (full recording follows).
-   {{< img
+   <img
    src="https://octetz.s3.us-east-2.amazonaws.com/vim-recording-full.gif"
-   class="center" >}}
+   class="center">
 
 Pretty rad, eh ;) ?
 

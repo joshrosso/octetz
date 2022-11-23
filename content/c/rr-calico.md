@@ -28,7 +28,7 @@ every other node to broadcast routes. This is done from the `calico/node` pod
 that runs on every node (via a daemonset). Let's assume a 5 node cluster, with
 an IP range of `10.30.0.13-10.30.0.17`.
 
-{{< img src="https://octetz.s3.us-east-2.amazonaws.com/routes.png" width="750px"
+<img src="https://octetz.s3.us-east-2.amazonaws.com/routes.png" width="750px"
 >}}
 
 Every colored line represents a peering connection we'd expect in this cluster.
@@ -60,8 +60,8 @@ reflectors provide a solution to this. Since Calico 3, `calico/node` can act as
 a reflector. Introducing 2 `calico/node` pods or containers as route reflectors
 would change the peering relationship to the following.
 
-{{< img src="https://octetz.s3.us-east-2.amazonaws.com/route-reflection.png"
-width="600px" >}}
+<img src="https://octetz.s3.us-east-2.amazonaws.com/route-reflection.png"
+width="600px">
 
 Calico makes achieving the above easy. We have 3 options to choose from.
 

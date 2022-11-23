@@ -10,8 +10,6 @@ aliases:
 
 # Preparing Machine Images for qemu/KVM
 
-{{< youtube 6ccpDwT1qnw >}}
-
 In a [previous post](https://octetz.com/docs/2020/2020-05-06-linux-hypervisor-setup), I covered using libvirt+qemu+kvm to manage virtual machines. Once you use these tools for a while, you get to a point of needing to setup images such that you can easily clone them. These can be thought of as 'base' images. A base image often contains the operating system, packages, and (possibly) configuration for each instance to build on. For example, let's assume you are setting up infrastructure to run Kubernetes clusters. In order to run Kubernetes, there are some key components expected on each machine. Thus, a viable base image might look like:
 
 - Linux Operating System (e.g. Ubuntu)
@@ -152,7 +150,7 @@ Now that the operating system is installed, we can SSH in and begin configuring 
 
 In order to clone this machine successfully, you need to ensure future replicas are unique in how they spin up. Take for example the IP address leased to this VM. The ID used to request a lease from the DHCP server is generated off the machine-id (`/etc/machine-id`). Here you can see the host's CLIENTID used in requesting that lease.
 
-{{< img src="https://octetz.s3.us-east-2.amazonaws.com/machine-images/duid.png" class="img-center" >}}
+<img src="https://octetz.s3.us-east-2.amazonaws.com/machine-images/duid.png" class="img-center">
 
 You don't want this to persist in future cloned instances or else they risk leasing the same IP. This could cause 2 routable hosts with the same IP to live on the network and cause all sorts of problems. It is key to understand how the machine-id got there. On start-up `systemd-machine-id-setup` is called. However, when `/etc/machine-id` is set, the code never fires to evaluate the client-id. When `/etc/machine-id` is missing, it detects that you are running on KVM and takes the UUID from `/sys/class/dmi/id/product_uuid`. This UUID could also be seen by running `virsh domuuid {name-of-domain/host}`. The following logic facilitates this, which can be found [in the systemd sourc](https://github.com/systemd/systemd/blob/90616bb962703d9d0d61e1988b302f2dae013cb5/src/core/machine-id-setup.c#L48-L78)e.
 

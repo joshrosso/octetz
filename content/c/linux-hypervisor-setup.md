@@ -18,8 +18,6 @@ to turn an old laptop or desktop into a screaming hypervisor. This way you can
 laugh at all your friends with their $10,000 homelab investment while
 you're getting all the same goodness on commodity hardware :).
 
-{{< youtube HfNKpT2jo7U >}}
-
 This setup is what I use day-to-day to create Kubernetes environments in a
 simple, manageable way without too many abstractions getting in my way. If
 understanding and running VMs on Linuxs hosts interests you, this post is for
@@ -87,9 +85,9 @@ The above _may_ feel overwhelming. But remember it is a look into the guts of
 all the pieces facilitating the virtualization stack. At a high-level, this
 diagram demonstrates the key relationships to understand:
 
-{{< img
+<img
 src="https://octetz.s3.us-east-2.amazonaws.com/running-a-minimal-hypervisor/kvm-stack.png"
-width="1000" >}}
+width="1000">
 
 How you install these tools depends on your package manager. My hypervisor OS is
 usually Arch, the following would install the above.
@@ -219,48 +217,48 @@ you'll create a new VM from an installation ISO.
 
 1. Create a new virtual machine.
 
-    {{< img
+    <img
     src="https://octetz.s3.us-east-2.amazonaws.com/running-a-minimal-hypervisor/create-vm-vm-mgr.png"
-    width="650" >}}
+    width="650">
 
 1. Choose Local install media.
 
-    {{< img
+    <img
     src="https://octetz.s3.us-east-2.amazonaws.com/running-a-minimal-hypervisor/local-install-media.png"
-    width="650" >}}
+    width="650">
 
 1. Browse for ISO.
 
 1. Add a new pool.
 
-    {{< img
+    <img
     src="https://octetz.s3.us-east-2.amazonaws.com/running-a-minimal-hypervisor/add-pool.png"
-    width="650" >}}
+    width="650">
 
 1. Name the pool `isos`.
 
 1. Set the Target Path to `/var/lib/libvirt/isos`.
 
-    {{< img
+    <img
     src="https://octetz.s3.us-east-2.amazonaws.com/running-a-minimal-hypervisor/target-path.png"
-    width="650" >}}
+    width="650">
 
 1. Click Finish.
 
 1. Select the iso and click Choose Volume.
 
-    {{< img
+    <img
     src="https://octetz.s3.us-east-2.amazonaws.com/running-a-minimal-hypervisor/choose-volume.png"
-    width="650" >}}
+    width="650">
 
 1. Go through prompts selecting desired system resources.
 
 1. You'll either be prompted to create a default network or choose the default
    network (NAT).
 
-    {{< img
+    <img
     src="https://octetz.s3.us-east-2.amazonaws.com/running-a-minimal-hypervisor/network-selection.png"
-    width="650" >}}
+    width="650">
 
     > There are many ways to approach the network. A common approach is to setup
     a bridge on the host that can act as a virtual switch. However, this is a
@@ -270,9 +268,9 @@ you'll create a new VM from an installation ISO.
 
 1. Wait for `virt-viewer` to popup and go through the installation process.
 
-    {{< img
+    <img
     src="https://octetz.s3.us-east-2.amazonaws.com/running-a-minimal-hypervisor/ubuntu-install.png"
-    width="600" >}}
+    width="600">
 
 1. Once installed, you can `ssh` to the guest based on its assigned IP address.
 
