@@ -253,7 +253,7 @@ your iteration needs before adding complexity to the control flow.
 
 ## Other styles
 
-Go's absencse of other loop styles like `while` shouldn't limit your abilities. You
+Go's absence of other loop styles like `while` shouldn't limit your abilities. You
 just need to consider how to express your needs based on the what was discussed
 above. Consider this example where a Java while loop attemps to print a message until a "scheduled" date is reached:
 
