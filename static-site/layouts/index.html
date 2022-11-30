@@ -1,22 +1,19 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous">
-    <title>{{ .Title }}</title>
-  </head>
-  <body>
-    <div class="container">
-      <main id="main">
-        <div id="home-jumbotron" class="jumbotron text-center">
-          <h1>{{ .Title }}</h1>
-          <p class="font-125">{{ .Site.Params.homeText | markdownify }}</p>
-        </div>
-      </main>
+{{ define "main" }}
+  <div class="page">
+    <div class="content-container">
+      <div class="content">
+        {{ range (.Site.RegularPages).ByDate.Reverse }}
+            <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a> 
+              | <time>{{ .Date.Format "01/02/2006" }}</time>
+              | <time>{{ .Params.Meta.Theme }}</time>
+              | <time>{{ .Params.Meta.Series }}</time>
+            </li>
+        {{ end }}
+      </div>
+      <div class="right-nav">
+        octetz is software and systems engineering content by Josh Rosso.
+        Content pages can be <a>opinions</a>, <a>guides</a>, and
+        <a>references</a> Related content may be grouped in a <a>series</a>.
     </div>
-  </body>
-</html>
+  </div>
+{{ end }}

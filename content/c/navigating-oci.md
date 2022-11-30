@@ -5,6 +5,9 @@ description: OCI has long been the standard format of container images. Over tim
 date: 2022-06-22
 images:
 - https://files.joshrosso.com/img/site/navigating-oci/twitter-title-navigating-oci.png
+meta:
+  theme: reference
+  series: none
 ---
 
 # Navigating OCI Artifacts and Images
