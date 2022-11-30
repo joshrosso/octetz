@@ -8,6 +8,9 @@ images:
 meta:
   theme: reference
   series: none
+  video:
+    provider: youtube
+    url: todo
 ---
 
 # Navigating OCI Artifacts and Images
