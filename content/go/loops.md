@@ -2,6 +2,9 @@
 title: "Loops"
 date: 2022-06-21
 draft: false
+meta:
+  theme: reference
+  series: Go
 ---
 
 # Loops

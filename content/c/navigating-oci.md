@@ -7,7 +7,6 @@ images:
 - https://files.joshrosso.com/img/site/navigating-oci/twitter-title-navigating-oci.png
 meta:
   theme: reference
-  series: none
   video:
     provider: youtube
     url: todo

@@ -2,6 +2,9 @@
 title: "Variables"
 date: 2022-11-16T10:41:11-07:00
 draft: false
+meta:
+  theme: reference
+  series: Go
 ---
 
 # Variables

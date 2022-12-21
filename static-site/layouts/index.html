@@ -1,19 +1,28 @@
 {{ define "main" }}
   <div class="page">
     <div class="content-container">
-      <div class="content">
+      <div class="left-spacer-for-list">
+      </div>
+      <div class="list-content">
         {{ range (.Site.RegularPages).ByDate.Reverse }}
-            <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a> 
-              | <time>{{ .Date.Format "01/02/2006" }}</time>
-              | <time>{{ .Params.Meta.Theme }}</time>
-              | <time>{{ .Params.Meta.Series }}</time>
-            </li>
-        {{ end }}
+        <div class="link-container">
+          <div class="link-title-container">
+            <div class="title">
+              {{ .Date.Format "01/02/2006" }}:
+              <a href="{{ .RelPermalink }}">
+                {{ if isset .Params.Meta "series" }}
+                  {{ .Params.Meta.Series }}:
+                {{ end }}
+                {{ .LinkTitle }}
+              </a>
+            </div>
+          </div>
+        </div>
+          {{ end }}
       </div>
       <div class="right-nav">
-        octetz is software and systems engineering content by Josh Rosso.
-        Content pages can be <a>opinions</a>, <a>guides</a>, and
-        <a>references</a> Related content may be grouped in a <a>series</a>.
+        octetz is software and systems engineering site containing references, guides, and
+        <a>opinions</a>.
     </div>
   </div>
 {{ end }}

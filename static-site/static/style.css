@@ -2,6 +2,7 @@
   font-family: light15;
   src: url("book-19.woff") format("woff");
 }
+
 @font-face {
   font-family: jbm;
   src: url("jetbrains-mono.woff2") format("woff2");
@@ -118,6 +119,12 @@ td {
   display: flex;
 }
 
+.left-spacer-for-list {
+  margin-right: 10px;
+  width: var(--left-nav-width);
+  height: 300px;
+}
+
 .left-nav {
   margin-right: 10px;
   width: var(--left-nav-width);
@@ -141,6 +148,21 @@ td {
 .right-nav ul li {
   line-height: 1.4;
   margin-bottom: 14px;
+}
+
+/* differs from standard .content in that it needs a min
+ * width since we cannot rely on the content to fill an 800px
+ * max. */
+.list-content {
+  padding: 0px 10px 0px 10px;
+  margin-top: 20px;
+  min-width: 800px;
+  max-width: 800px;
+  border-width: 1px;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-color: var(--border-color);
 }
 
 .content {
@@ -199,8 +221,24 @@ hr {
   line-height: 1.5;
 }
 
-.cls-1{
+.cls-1 {
   fill: var(--logo-fill-color);
+}
+
+/* lists */
+.link-container {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+.link-title-container {
+  font-family: jbm;
+}
+.link-meta-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.link-series-container {
+  display: flex;
 }
 
 @media (max-width: 1200px) {

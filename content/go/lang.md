@@ -2,9 +2,12 @@
 title: "The Go Programming Language"
 date: 2022-11-16T10:41:11-07:00
 draft: false
+meta:
+  theme: reference
+  series: Go
 ---
 
-# The Go Programming Language
+# The Go Programming Language failed at <isset>: wrong numb
 
 The Go programming language is a compiled,
 [statically-typed](https://en.wikipedia.org/wiki/Type_system#Static_type_checking),
